@@ -23,7 +23,7 @@ jobs:
     - name: npm install
       run: |
         make install
-      env: CodeClimat
+      env: CodeClimate
         CI: true
       - name: Run linter
         run: |
