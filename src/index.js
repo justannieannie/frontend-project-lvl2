@@ -1,12 +1,9 @@
 import _ from 'lodash';
-import path from 'path';
-import fs from 'fs';
+import generateObj from './parsers/parsers.js';
 
 const genDiff = (filepath1, filepath2) => {
-  const normalPath1 = path.resolve(process.cwd(), filepath1);
-  const normalPath2 = path.resolve(process.cwd(), filepath2);
-  const obj1 = JSON.parse(fs.readFileSync(normalPath1));
-  const obj2 = JSON.parse(fs.readFileSync(normalPath2));
+  const obj1 = generateObj(filepath1);
+  const obj2 = generateObj(filepath2);
   const getDiff = (key) => {
     if (!_.has(obj1, key)) {
       return `- ${key}: ${obj2[key]}`;
