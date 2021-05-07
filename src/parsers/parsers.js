@@ -10,6 +10,6 @@ const generateObj = (filepath) => {
     return yaml.load(fs.readFileSync(normalPath, 'utf-8'));
   }
   return JSON.parse(fs.readFileSync(normalPath, 'utf-8'));
-  };
+};
 
 export default generateObj;
