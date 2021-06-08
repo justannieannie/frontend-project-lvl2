@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import generateObj from './parsers/parsers.js';
 import makeDiff from './treeBuilder.js';
 import stylish from './stylish.js';

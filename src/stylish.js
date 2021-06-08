@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const stylish = (value, replacer = ' ', spacesCount = 2) => {
+const stylish = (data, replacer = ' ', spacesCount = 2) => {
   const prefixes = ['  ', '+ ', '- '];
   const iter = (currentValue, depth) => {
     if (!_.isObject(currentValue)) {
@@ -21,8 +21,7 @@ const stylish = (value, replacer = ' ', spacesCount = 2) => {
     ].join('\n');
   };
 
-  return iter(value, 1);
+  return iter(data, 1);
 };
-
 
 export default stylish;

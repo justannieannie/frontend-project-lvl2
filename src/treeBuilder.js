@@ -15,7 +15,7 @@ const makeDiff = (obj1, obj2) => {
     if (_.has(obj1, key) && _.has(obj2, key) && obj1[key] !== obj2[key]) {
       return { ...acc, [`- ${key}`]: obj1[key], [`+ ${key}`]: obj2[key] };
     }
-    
+
     return { ...acc, [`  ${key}`]: obj1[key] };
   }, {});
   return result;
