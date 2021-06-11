@@ -35,7 +35,7 @@ const stylish = (tree) => {
       case 'removed':
         return `\n${indent}- ${key}: ${stringify(value, space)}`;
       default:
-       throw new Error(`Unknown condition ${type}`);
+        throw new Error(`Unknown condition ${type}`);
     }
   });
   const result = iter(tree);
