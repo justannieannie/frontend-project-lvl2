@@ -1,7 +1,6 @@
 import { test, expect } from '@jest/globals';
 import path from 'path';
 import fs from 'fs';
-import { cwd } from 'process';
 import genDiff from '../src/index';
 
 const normalPath = (filepath) => path.resolve(process.cwd(), filepath);

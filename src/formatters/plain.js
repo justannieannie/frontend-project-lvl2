@@ -23,7 +23,10 @@ const plain = (tree) => {
         return `Property '${normalPath.join('.')}' was removed\n`;
       case 'changed':
         return `Property '${normalPath.join('.')}' was updated. From ${stringify(oldValue)} to ${stringify(newValue)}\n`;
-      }
+      default:
+        return;
+    }
+    return;
   });
   const result = iter(tree, []);
   return result.join('');

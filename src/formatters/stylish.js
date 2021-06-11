@@ -7,7 +7,6 @@ const stringify = (value, space) => {
   const indent = ' '.repeat(space + 6);
   const bracketIndent = ' '.repeat(space + 2);
   const result = Object.entries(value).map(([key, val]) => {
-
     if (_.isObject(val)) {
       return `${indent}${key}: ${stringify(val, space + 4)}\n`;
     }
@@ -35,10 +34,13 @@ const stylish = (tree) => {
         return `\n${indent}+ ${key}: ${stringify(value, space)}`;
       case 'removed':
         return `\n${indent}- ${key}: ${stringify(value, space)}`;
-        }
-    });
-      const result = iter(tree);
-      return `{${result.join('')}\n}`;
-    };
+      default:
+        return;
+      }
+      return;
+  });
+  const result = iter(tree);
+  return `{${result.join('')}\n}`;
+};
 
 export default stylish;

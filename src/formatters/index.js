@@ -10,7 +10,10 @@ const format = (tree, name) => {
       return plain(tree);
     case 'json':
       return json(tree);
+    default:
+      throw new Error(`Unknown format!`);
   }
+  return;
 };
 
 export default format;
