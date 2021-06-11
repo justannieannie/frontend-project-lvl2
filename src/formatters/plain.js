@@ -24,7 +24,7 @@ const plain = (tree) => {
       case 'changed':
         return `Property '${normalPath.join('.')}' was updated. From ${stringify(oldValue)} to ${stringify(newValue)}\n`;
       default:
-        throw new Error(`Unknown condition ${type}`);
+        return null;
     }
   });
   const result = iter(tree, []);
