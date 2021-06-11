@@ -1,6 +1,6 @@
 import { test, expect } from '@jest/globals';
 import fs from 'fs';
-import genDiff from '../src/index.js';
+import genDiff from '../index.js';
 
 const readFile = (file) => fs.readFileSync(file, 'utf-8');
 
