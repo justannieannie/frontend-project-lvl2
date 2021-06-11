@@ -28,7 +28,7 @@ const plain = (tree) => {
     }
   });
   const result = iter(tree, []);
-  return result.join('');
+  return result.join('').trim();
 };
 
 export default plain;
