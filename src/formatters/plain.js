@@ -9,8 +9,7 @@ const stringify = (value) => {
 };
 
 const plain = (tree) => {
-  const iter = (data, path) => {
-    return data.flatMap((node) => {
+  const iter = (data, path) => data.flatMap((node) => {
     const {
       key, type, value, children, oldValue, newValue,
     } = node;
@@ -26,8 +25,8 @@ const plain = (tree) => {
         return `Property '${normalPath.join('.')}' was updated. From ${stringify(oldValue)} to ${stringify(newValue)}\n`;
       default:
     }
+    return;
   });
-}
   const result = iter(tree, []);
   return result.join('');
 };

@@ -16,8 +16,7 @@ const stringify = (value, space) => {
 };
 
 const stylish = (tree) => {
-  const iter = (data, space = 2) => {
-    return data.flatMap((node) => {
+  const iter = (data, space = 2) => data.flatMap((node) => {
     const indent = ' '.repeat(space);
     const bracketIndent = ' '.repeat(space + 2);
     const {
@@ -37,8 +36,8 @@ const stylish = (tree) => {
         return `\n${indent}- ${key}: ${stringify(value, space)}`;
       default:
     }
-  })
-};
+    return;
+  });
   const result = iter(tree);
   return `{${result.join('')}\n}`;
 };
