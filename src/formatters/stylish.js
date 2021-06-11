@@ -36,7 +36,6 @@ const stylish = (tree) => {
         return `\n${indent}- ${key}: ${stringify(value, space)}`;
       default:
     }
-    return;
   });
   const result = iter(tree);
   return `{${result.join('')}\n}`;

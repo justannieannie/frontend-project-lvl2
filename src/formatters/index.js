@@ -13,7 +13,6 @@ const format = (tree, name) => {
     default:
       throw new Error('Unknown format!');
   }
-  return;
 };
 
 export default format;
