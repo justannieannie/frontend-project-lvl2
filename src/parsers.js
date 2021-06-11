@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs';
 
 const generateObj = (filepath) => {
-  const normalPath = path.resolve(process.cwd(), filepath);
+  const normalPath = path.resolve(filepath);
   const format = path.extname(normalPath);
 
   if (format === '.yml' || format === '.yaml') {
