@@ -35,9 +35,8 @@ const stylish = (tree) => {
       case 'removed':
         return `\n${indent}- ${key}: ${stringify(value, space)}`;
       default:
-        return;
-      }
-      return;
+    }
+    return;
   });
   const result = iter(tree);
   return `{${result.join('')}\n}`;

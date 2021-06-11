@@ -11,7 +11,7 @@ const format = (tree, name) => {
     case 'json':
       return json(tree);
     default:
-      throw new Error(`Unknown format!`);
+      throw new Error('Unknown format!');
   }
   return;
 };
