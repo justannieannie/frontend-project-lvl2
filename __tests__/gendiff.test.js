@@ -1,28 +1,26 @@
 import { test, expect } from '@jest/globals';
-import path from 'path';
 import fs from 'fs';
 import genDiff from '../src/index.js';
 
-const normalPath = (filepath) => path.resolve(filepath);
-const readFile = (file) => fs.readFileSync(normalPath(file), 'utf-8');
+const readFile = (file) => fs.readFileSync(file, 'utf-8');
 
 const resultOfstylish = readFile('__fixtures__/resultOfstylish.txt');
 const resultOfplain = readFile('__fixtures__/resultOfplain.txt');
 const resultOfjson = readFile('__fixtures__/resultOfjson.txt');
-const normalJson1 = normalPath('__fixtures__/file1.json');
-const normalJson2 = normalPath('__fixtures__/file2.json');
-const normalYml1 = normalPath('__fixtures__/file1.yml');
-const normalYml2 = normalPath('__fixtures__/file2.yml');
+const json1 = '__fixtures__/file1.json';
+const json2 = '__fixtures__/file2.json';
+const yml1 = '__fixtures__/file1.yml';
+const yml2 = '__fixtures__/file2.yml';
 
 test('genDiffstylish', () => {
-  expect(genDiff(normalJson1, normalJson2)).toEqual(resultOfstylish);
-  expect(genDiff(normalYml1, normalYml2)).toEqual(resultOfstylish);
+  expect(genDiff(json1, json2)).toEqual(resultOfstylish);
+  expect(genDiff(yml1, yml2)).toEqual(resultOfstylish);
 });
 test('genDiffplain', () => {
-  expect(genDiff(normalJson1, normalJson2, 'plain')).toEqual(resultOfplain);
-  expect(genDiff(normalJson1, normalJson2, 'plain')).toEqual(resultOfplain);
+  expect(genDiff(json1, json2, 'plain')).toEqual(resultOfplain);
+  expect(genDiff(yml1, yml2, 'plain')).toEqual(resultOfplain);
 });
 test('genDiffjson', () => {
-  expect(genDiff(normalJson1, normalJson2, 'json')).toEqual(resultOfjson);
-  expect(genDiff(normalJson1, normalJson2, 'json')).toEqual(resultOfjson);
+  expect(genDiff(json1, json2, 'json')).toEqual(resultOfjson);
+  expect(genDiff(yml1, yml2, 'json')).toEqual(resultOfjson);
 });
