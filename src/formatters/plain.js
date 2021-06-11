@@ -9,7 +9,8 @@ const stringify = (value) => {
 };
 
 const plain = (tree) => {
-  const iter = (data, path) => data.flatMap((node) => {
+  const iter = (data, path) => {
+    return data.flatMap((node) => {
     const {
       key, type, value, children, oldValue, newValue,
     } = node;
@@ -26,6 +27,7 @@ const plain = (tree) => {
       default:
     }
   });
+}
   const result = iter(tree, []);
   return result.join('');
 };
