@@ -21,7 +21,7 @@ npm link
 ### Flat json files (stylish format)
 [![asciicast](https://asciinema.org/a/419129.svg)](https://asciinema.org/a/419129)
 
-### Nested json files (stylish format)
+### Nested yml files (stylish format)
 [![asciicast](https://asciinema.org/a/412662.svg)](https://asciinema.org/a/412662)
 
 ### Nested yml files (plain format)
