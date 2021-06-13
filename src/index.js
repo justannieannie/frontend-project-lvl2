@@ -13,7 +13,7 @@ const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
 
   const obj1 = parse(file1, getFormat(filepath1));
   const obj2 = parse(file2, getFormat(filepath2));
-  
+
   const diff = makeDiff(obj1, obj2);
   return format(diff, formatName);
 };
