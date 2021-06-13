@@ -5,7 +5,7 @@ const stringify = (value) => {
     return '[complex value]';
   }
 
-  return typeof value === 'string' ? `'${value}'` : value;
+  return typeof value === 'string' ? `'${value}'` : `${value}`;
 };
 
 const plain = (tree) => {

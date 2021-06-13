@@ -10,12 +10,22 @@ This repository is created as educational project on Hexlet.
 
 ---------------------------------------
 ## Installation
-make install
+npm link
 
+[![asciicast](https://asciinema.org/a/420058.svg)](https://asciinema.org/a/420058)
+
+---------------------------------------
 
 ## Examples of gendiff package work
+
+### Flat json files (stylish format)
 [![asciicast](https://asciinema.org/a/419129.svg)](https://asciinema.org/a/419129)
 
+### Nested json files (stylish format)
 [![asciicast](https://asciinema.org/a/412662.svg)](https://asciinema.org/a/412662)
 
-[![asciicast](https://asciinema.org/a/419749.svg)](https://asciinema.org/a/419749)
+### Nested yml files (plain format)
+[![asciicast](https://asciinema.org/a/420051.svg)](https://asciinema.org/a/420051)
+
+### Nested yml files (json format)
+[![asciicast](https://asciinema.org/a/420053.svg)](https://asciinema.org/a/420053)
