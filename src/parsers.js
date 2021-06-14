@@ -7,5 +7,4 @@ const formatters = {
 
 const parse = (file, format) => formatters[format](file);
 
-
 export default parse;
