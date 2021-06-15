@@ -5,7 +5,7 @@ import makeDiff from './treeBuilder.js';
 import format from './formatters/index.js';
 
 const normalPath = (filepath) => path.resolve(filepath);
-const getFormat = (filepath) => path.extname(filepath);
+const getFormat = (filepath) => path.extname(filepath).slice(1);
 
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const file1 = fs.readFileSync(normalPath(filepath1), 'utf-8');
