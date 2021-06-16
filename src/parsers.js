@@ -5,6 +5,6 @@ const formatters = {
   yml: yaml.load,
 };
 
-const parse = (file, format) => formatters[format](file);
+const parse = (data, format) => formatters[format](data);
 
 export default parse;
